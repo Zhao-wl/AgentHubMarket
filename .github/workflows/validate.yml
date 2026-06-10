@@ -1,0 +1,22 @@
+name: Validate marketplace.json
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    paths:
+      - marketplace.json
+      - schemas/**
+      - scripts/**
+      - .github/workflows/validate.yml
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Validate marketplace.json
+        run: node scripts/validate-marketplace.mjs

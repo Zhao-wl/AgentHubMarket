@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agenthub.local/schemas/marketplace.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "plugins"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "plugins": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "version", "repository", "readme"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9._-]*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 60
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 160
+          },
+          "publisher": { "type": "string" },
+          "version": {
+            "type": "string",
+            "pattern": "^v?\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+          },
+          "repository": {
+            "type": "string",
+            "pattern": "^https://(github\\.com|gitlab\\.com)/.+"
+          },
+          "ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "readme": {
+            "type": "string",
+            "format": "uri"
+          },
+          "manifest": {
+            "type": "string",
+            "format": "uri"
+          },
+          "tags": {
+            "type": "array",
+            "maxItems": 10,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "license": { "type": "string" },
+          "homepage": {
+            "type": "string",
+            "format": "uri"
+          },
+          "icon": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    }
+  }
+}
