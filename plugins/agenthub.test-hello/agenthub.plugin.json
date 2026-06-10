@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "agenthub.test-hello",
+  "name": "Test Hello",
+  "version": "0.1.0",
+  "publisher": "agenthub",
+  "engines": {
+    "agenthub": ">=0.1.0"
+  },
+  "contributes": {
+    "configuration": {
+      "categories": [
+        {
+          "key": "agenthub.test-hello",
+          "title": "Test Hello",
+          "parent": "agenthub.plugins"
+        }
+      ],
+      "settings": [
+        {
+          "key": "agenthub.test-hello.greeting",
+          "type": "string",
+          "default": "Hello from test plugin!",
+          "scope": "user",
+          "title": "问候语",
+          "category": "agenthub.test-hello"
+        }
+      ]
+    },
+    "activityBar": [
+      {
+        "id": "hello",
+        "title": "Hello Test",
+        "icon": "icons/hello.svg",
+        "view": "agenthub.test-hello.main",
+        "order": 100
+      }
+    ],
+    "views": [
+      {
+        "id": "agenthub.test-hello.main",
+        "title": "Test Hello",
+        "component": "agenthub.test-hello.main"
+      }
+    ]
+  }
+}

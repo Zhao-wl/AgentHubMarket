@@ -10,6 +10,10 @@ AgentHub 客户端通过用户级 / 项目级设置项 `agenthub.marketplace.sou
 
 由 AgentHub 维护。插件收录范围:与 AgentHub 宿主兼容、提供 `agenthub.plugin.json` manifest 的公开插件。
 
+## 本地开发
+
+若将本仓库作为本地 AgentHub 的测试市场，并验证插件安装链路，请参阅 [docs/local-dev.md](docs/local-dev.md)。仓库内置测试插件 `agenthub.test-hello`（源码位于 `plugins/agenthub.test-hello/`）。
+
 ## 如何配置为市场源
 
 在 AgentHub 设置中心的 `agenthub.marketplace.sources` 中加入一条:

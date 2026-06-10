@@ -6,6 +6,9 @@ on:
   pull_request:
     paths:
       - marketplace.json
+      - plugins/**
+      - agenthub.plugin.json
+      - icons/**
       - schemas/**
       - scripts/**
       - .github/workflows/validate.yml
@@ -18,5 +21,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Sync test plugin to repo root
+        run: node scripts/sync-test-plugin.mjs
       - name: Validate marketplace.json
         run: node scripts/validate-marketplace.mjs
