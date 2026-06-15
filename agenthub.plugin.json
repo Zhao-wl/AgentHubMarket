@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "agenthub.test-hello",
   "name": "Test Hello",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "agenthub",
   "engines": {
     "agenthub": ">=0.1.0"

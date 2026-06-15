@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "name": "AgentHub Official Marketplace",
   "description": "AgentHub 官方插件市场索引。仅提供插件列表数据,不托管插件代码,也不运行任何服务端逻辑。",
-  "updatedAt": "2026-06-10T00:00:00.000Z",
+  "updatedAt": "2026-06-15T00:00:00.000Z",
   "plugins": [
     {
       "id": "agenthub.test-hello",
       "name": "Test Hello",
       "description": "用于验证 AgentHub 插件市场安装、启用与活动栏贡献链路的最小测试插件",
       "publisher": "agenthub",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "repository": "https://github.com/Zhao-wl/AgentHubMarket",
       "ref": "master",
       "readme": "https://raw.githubusercontent.com/Zhao-wl/AgentHubMarket/master/plugins/agenthub.test-hello/README.md",
